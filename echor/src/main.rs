@@ -10,7 +10,8 @@ fn main() {
                 .value_name("TEXT")
                 .help("Input text")
                 .required(true)
-                .min_values(1),
+                .min_values(1)
+                .allow_invalid_utf8(true),
         )
         .arg(
             Arg::with_name("omit_newline")

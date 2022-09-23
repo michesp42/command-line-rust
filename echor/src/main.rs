@@ -9,9 +9,9 @@ fn main() {
             Arg::new("text")
                 .value_name("TEXT")
                 .help("Input text")
+                .value_parser(clap::value_parser!(std::ffi::OsString))
                 .required(true)
-                .min_values(1)
-                .allow_invalid_utf8(true),
+                .min_values(1),
         )
         .arg(
             Arg::new("omit_newline")

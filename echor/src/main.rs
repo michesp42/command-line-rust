@@ -6,7 +6,7 @@ fn main() {
         .author("Michael Espeña <michael.esp42@pm.me>")
         .about("Rust echo")
         .arg(
-            Arg::with_name("text")
+            Arg::new("text")
                 .value_name("TEXT")
                 .help("Input text")
                 .required(true)
@@ -14,7 +14,7 @@ fn main() {
                 .allow_invalid_utf8(true),
         )
         .arg(
-            Arg::with_name("omit_newline")
+            Arg::new("omit_newline")
                 .short('n')
                 .help("Do not print newline")
                 .takes_value(false),

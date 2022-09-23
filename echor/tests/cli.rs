@@ -1,3 +1,5 @@
+use std::fs;
+
 use assert_cmd::Command;
 use predicates::prelude::*;
 
